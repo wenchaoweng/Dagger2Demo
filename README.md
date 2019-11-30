@@ -71,7 +71,8 @@ Dagger的作用就是通过注解的方式，帮我们自动生成创建对象�
 ### 3. 创建Component类 ###
 事实上完成第二步后，MainActivity中成员mUser并没有调用构造方法完成初始化，还需要一个类来完成注入，这就是Component类。
 我们创建一个MainComponent接口，提供一个inject方法，其参数为将被注入的类MainActivity
-
+	
+	@Component
 	public interface MainComponent {
 	
 	    void inject(MainActivity activity);
